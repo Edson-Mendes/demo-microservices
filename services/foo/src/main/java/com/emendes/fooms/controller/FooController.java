@@ -14,7 +14,7 @@ import java.net.URI;
 
 @RequiredArgsConstructor
 @RestController
-@RequestMapping("/api/foo")
+@RequestMapping("/api/foos")
 public class FooController {
 
   private final FooService fooService;
