@@ -11,4 +11,6 @@ public interface FooService {
 
   Page<FooResponse> fetchAll(Pageable pageable);
 
+  FooResponse findById(long id);
+
 }

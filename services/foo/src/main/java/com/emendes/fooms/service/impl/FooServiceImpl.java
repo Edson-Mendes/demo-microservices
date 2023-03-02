@@ -11,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.time.LocalDateTime;
 
 @Slf4j
@@ -36,6 +37,13 @@ public class FooServiceImpl implements FooService {
     log.info("fetch pageable foo");
 
     return fooPage.map(this::fooToFooResponse);
+  }
+
+  @Override
+  public FooResponse findById(long id) {
+    Foo foo = fooRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Foo not found"));
+
+    return fooToFooResponse(foo);
   }
 
   private FooResponse fooToFooResponse(Foo foo) {

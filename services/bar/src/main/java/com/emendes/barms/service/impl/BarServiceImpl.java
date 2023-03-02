@@ -1,5 +1,6 @@
 package com.emendes.barms.service.impl;
 
+import com.emendes.barms.client.BarClient;
 import com.emendes.barms.dto.request.BarRequest;
 import com.emendes.barms.dto.response.BarResponse;
 import com.emendes.barms.model.entity.Bar;
@@ -17,16 +18,15 @@ import java.time.LocalDateTime;
 public class BarServiceImpl implements BarService {
 
   private final BarRepository barRepository;
+  private final BarClient barClient;
 
   @Override
   public BarResponse create(BarRequest barRequest) {
 
-    // TODO: Realizar uma requisição para o serviço foo e verificar se existe foo com o dado id.
-//    if (client.existsFoo(barRequest.getFooId()))
-
+    barClient.fetchFooById(barRequest.getFooId());
     Bar bar = barRepository.save(barRequestToBar(barRequest));
-
     return barToBarResponse(bar);
+
   }
 
   @Override

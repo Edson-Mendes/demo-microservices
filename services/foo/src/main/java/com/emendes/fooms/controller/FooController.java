@@ -31,5 +31,10 @@ public class FooController {
     return ResponseEntity.ok(fooService.fetchAll(pageable));
   }
 
+  @GetMapping("/{id}")
+  public ResponseEntity<FooResponse> findById(@PathVariable(name = "id") long id) {
+    return ResponseEntity.ok(fooService.findById(id));
+  }
+
 
 }
