@@ -43,6 +43,8 @@ public class FooServiceImpl implements FooService {
   public FooResponse findById(long id) {
     Foo foo = fooRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Foo not found"));
 
+    log.info("fetching foo by id");
+
     return fooToFooResponse(foo);
   }
 

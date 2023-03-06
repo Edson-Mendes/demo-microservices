@@ -4,6 +4,7 @@ import com.emendes.fooms.dto.request.FooRequest;
 import com.emendes.fooms.dto.response.FooResponse;
 import com.emendes.fooms.service.FooService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 
+@Slf4j
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/foos")
