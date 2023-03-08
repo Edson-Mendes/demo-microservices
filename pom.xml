@@ -19,6 +19,7 @@
   <modules>
     <module>services/foo</module>
     <module>services/bar</module>
+    <module>services/notification</module>
 
     <module>services/eureka</module>
     <module>services/gateway</module>
