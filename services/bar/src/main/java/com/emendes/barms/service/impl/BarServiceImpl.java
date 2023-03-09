@@ -3,7 +3,7 @@ package com.emendes.barms.service.impl;
 import com.emendes.barms.client.BarClient;
 import com.emendes.barms.dto.request.BarRequest;
 import com.emendes.barms.dto.response.BarResponse;
-import com.emendes.barms.event.CreateBarEvent;
+import com.emendes.barms.dto.event.CreateBarEvent;
 import com.emendes.barms.model.entity.Bar;
 import com.emendes.barms.repository.BarRepository;
 import com.emendes.barms.service.BarService;

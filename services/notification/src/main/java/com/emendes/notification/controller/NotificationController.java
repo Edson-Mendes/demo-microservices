@@ -1,6 +1,6 @@
 package com.emendes.notification.controller;
 
-import com.emendes.notification.dto.NotificationResponse;
+import com.emendes.notification.dto.response.NotificationResponse;
 import com.emendes.notification.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

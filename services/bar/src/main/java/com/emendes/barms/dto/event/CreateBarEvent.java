@@ -1,4 +1,4 @@
-package com.emendes.barms.event;
+package com.emendes.barms.dto.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

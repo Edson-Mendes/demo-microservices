@@ -1,6 +1,6 @@
 package com.emendes.notification.service.impl;
 
-import com.emendes.notification.dto.NotificationResponse;
+import com.emendes.notification.dto.response.NotificationResponse;
 import com.emendes.notification.model.entity.Notification;
 import com.emendes.notification.repository.NotificationRepository;
 import com.emendes.notification.service.NotificationService;

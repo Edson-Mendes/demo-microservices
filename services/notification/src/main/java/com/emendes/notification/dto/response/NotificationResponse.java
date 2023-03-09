@@ -1,4 +1,4 @@
-package com.emendes.notification.dto;
+package com.emendes.notification.dto.response;
 
 import lombok.*;
 
