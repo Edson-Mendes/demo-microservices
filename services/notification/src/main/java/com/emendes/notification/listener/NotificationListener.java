@@ -1,21 +1,24 @@
 package com.emendes.notification.listener;
 
 import com.emendes.notification.dto.event.CreateBarEvent;
+import com.emendes.notification.service.NotificationService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Slf4j
+@RequiredArgsConstructor
 @Component
 public class NotificationListener {
 
+  private final NotificationService notificationService;
+
   @KafkaListener(topics = "notificationTopic")
   public void handleNotification(CreateBarEvent createBarEvent) {
-    log.info("The bar {} was created with id {}", createBarEvent.getName(), createBarEvent.getId());
-    log.info("Preparing to send notifications");
-    log.info("Sending notification by SMS");
-    log.info("Sending notification by E-mail");
-    log.info("Send messages done");
+    log.info("notification received");
+
+    notificationService.save(createBarEvent);
   }
 
 }
